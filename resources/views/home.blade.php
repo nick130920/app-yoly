@@ -1,9 +1,12 @@
 @extends('layouts.app')
 
+@section('perfil')
+<a class="dropdown-item" href="{{ route('perfil') }}">{{ __('Perfil') }}</a>
+@endsection
+
 @section('content')
 <div class="position-relative">
-
-    <!-- shape Hero -->
+<!-- shape Hero -->
     <section class="section section-lg section-shaped pb-250">
         <div class="shape shape-style-1 shape-default shape-skew alpha-4">
             <span></span>
@@ -16,30 +19,22 @@
             <span></span>
             <span></span>
         </div>
-        <div class="alert alert-info alert-dismissible fade show" role="alert">
-          <span class="alert-inner--icon"><i class="ni ni-like-2"></i></span>
-          <span class="alert-inner--text"><strong>Exito!</strong> Te has logueado!</span>
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
         <div class="container py-lg-md d-flex">
-
             <div class="col px-0">
                 <div class="row">
                     <div class="col-lg-6">
-                        <h1 class="display-3  text-white">A beautiful Design System
-                            <span>completed with examples</span>
+                        <h1 class="display-3 text-ente">Yoly Shoes
+                            <span></span>
                         </h1>
-                        <p class="lead  text-white">The design system comes with four pre-built pages to help you get started faster. You can change the text and images and you're good to go.</p>
+                        <p class="lead  text-white">Compras en linea de los mejores zapatos.</p>
                         <div class="btn-wrapper">
                             <a href="https://demos.creative-tim.com/argon-design-system/docs/components/alerts.html" class="btn btn-info btn-icon mb-3 mb-sm-0">
                                 <span class="btn-inner--icon"><i class="fa fa-code"></i></span>
-                                <span class="btn-inner--text">Components</span>
+                                <span class="btn-inner--text">¿Como comprar?</span>
                             </a>
                             <a href="https://www.creative-tim.com/product/argon-design-system" class="btn btn-white btn-icon mb-3 mb-sm-0">
-                                <span class="btn-inner--icon"><i class="ni ni-cloud-download-95"></i></span>
-                                <span class="btn-inner--text">Download HTML</span>
+                                <span class="btn-inner--icon"><i class="fa fa-play"></i></span>
+                                <span class="btn-inner--text">mira...</span>
                             </a>
                         </div>
                     </div>
@@ -60,14 +55,14 @@
                                 <div class="icon icon-shape icon-shape-primary rounded-circle mb-4">
                                     <i class="ni ni-check-bold"></i>
                                 </div>
-                                <h6 class="text-primary text-uppercase">Download Argon</h6>
-                                <p class="description mt-3">Argon is a great free UI package based on Bootstrap 4 that includes the most important components and features.</p>
+                                <h6 class="text-primary text-uppercase">Calidad</h6>
+                                <p class="description mt-3">los mejores productos con calidad asegurada para tu comodidad y satisfacción al momento de caminar.</p>
                                 <div>
-                                    <span class="badge badge-pill badge-primary">design</span>
-                                    <span class="badge badge-pill badge-primary">system</span>
-                                    <span class="badge badge-pill badge-primary">creative</span>
+                                    <span class="badge badge-pill badge-primary">Cuero</span>
+                                    <span class="badge badge-pill badge-primary">sintetico</span>
+                                    <span class="badge badge-pill badge-primary">tela</span>
                                 </div>
-                                <a href="#" class="btn btn-primary mt-4">Learn more</a>
+                                <a href="#" class="btn btn-primary mt-4">Leer más</a>
                             </div>
                         </div>
                     </div>
@@ -77,14 +72,14 @@
                                 <div class="icon icon-shape icon-shape-success rounded-circle mb-4">
                                     <i class="ni ni-istanbul"></i>
                                 </div>
-                                <h6 class="text-success text-uppercase">Build Something</h6>
-                                <p class="description mt-3">Argon is a great free UI package based on Bootstrap 4 that includes the most important components and features.</p>
+                                <h6 class="text-success text-uppercase">Variedad</h6>
+                                <p class="description mt-3">Yoly shoes tiene una gran variedad en productos para los diferentes gustos, desde sandalias hasta tacón alto.</p>
                                 <div>
-                                    <span class="badge badge-pill badge-success">business</span>
-                                    <span class="badge badge-pill badge-success">vision</span>
-                                    <span class="badge badge-pill badge-success">success</span>
+                                    <span class="badge badge-pill badge-success">Sandalias</span>
+                                    <span class="badge badge-pill badge-success">Tacones</span>
+                                    <span class="badge badge-pill badge-success">Botas</span>
                                 </div>
-                                <a href="#" class="btn btn-success mt-4">Learn more</a>
+                                <a href="#" class="btn btn-success mt-4">Leer más</a>
                             </div>
                         </div>
                     </div>
@@ -94,14 +89,14 @@
                                 <div class="icon icon-shape icon-shape-warning rounded-circle mb-4">
                                     <i class="ni ni-planet"></i>
                                 </div>
-                                <h6 class="text-warning text-uppercase">Prepare Launch</h6>
-                                <p class="description mt-3">Argon is a great free UI package based on Bootstrap 4 that includes the most important components and features.</p>
+                                <h6 class="text-warning text-uppercase">Seguridad</h6>
+                                <p class="description mt-3">Satisfacción asegurada, verificamos que sus compras lleguen al lugar indicado, seguridad a la hora de comprar.</p>
                                 <div>
                                     <span class="badge badge-pill badge-warning">marketing</span>
                                     <span class="badge badge-pill badge-warning">product</span>
                                     <span class="badge badge-pill badge-warning">launch</span>
                                 </div>
-                                <a href="#" class="btn btn-warning mt-4">Learn more</a>
+                                <a href="#" class="btn btn-warning mt-4">Leer más</a>
                             </div>
                         </div>
                     </div>
@@ -228,7 +223,7 @@
                             <div class="pl-4">
                                 <h5 class="title text-success">Awesome Support</h5>
                                 <p>The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and that process will continue whatever.</p>
-                                <a href="#" class="text-success">Learn more</a>
+                                <a href="#" class="text-success">Leer más</a>
                             </div>
                         </div>
                     </div>
@@ -244,7 +239,7 @@
                             <div class="pl-4">
                                 <h5 class="title text-warning">Modular Components</h5>
                                 <p>The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and that process will continue whatever.</p>
-                                <a href="#" class="text-warning">Learn more</a>
+                                <a href="#" class="text-warning">Leer más</a>
                             </div>
                         </div>
                     </div>
@@ -515,7 +510,7 @@
             <div class="col-md-6 mb-5 mb-lg-0">
                 <div class="card card-lift--hover shadow border-0">
                     <a href="../examples/profile.html" title="Profile Page">
-                        <img src="{{asset('')}}/img/theme/profile.jpg" class="card-img">
+                        <img src="{{asset('/img/theme/profile.jpg')}}" class="card-img">
                     </a>
                 </div>
             </div>

@@ -66,7 +66,7 @@
                                         <badge type="primary" rounded>creative</badge>
                                     </div>
                                     <base-button tag="a" href="#" type="primary" class="mt-4">
-                                        Learn more
+                                        Leer más
                                     </base-button>
                                 </card>
                             </div>
@@ -83,7 +83,7 @@
                                         <badge type="success" rounded>success</badge>
                                     </div>
                                     <base-button tag="a" href="#" type="success" class="mt-4">
-                                        Learn more
+                                        Leer más
                                     </base-button>
                                 </card>
                             </div>
@@ -100,7 +100,7 @@
                                         <badge type="warning" rounded>launch</badge>
                                     </div>
                                     <base-button tag="a" href="#" type="warning" class="mt-4">
-                                        Learn more
+                                        Leer más
                                     </base-button>
                                 </card>
                             </div>
@@ -222,7 +222,7 @@
                                     <h5 class="title text-success">Awesome Support</h5>
                                     <p>The Arctic Ocean freezes every winter and much of the sea-ice then thaws
                                         every summer, and that process will continue whatever happens.</p>
-                                    <a href="#" class="text-success">Learn more</a>
+                                    <a href="#" class="text-success">Leer más</a>
                                 </div>
                             </div>
                         </card>
@@ -236,7 +236,7 @@
                                     <h5 class="title text-warning">Modular Components</h5>
                                     <p>The Arctic Ocean freezes every winter and much of the sea-ice then thaws
                                         every summer, and that process will continue whatever happens.</p>
-                                    <a href="#" class="text-warning">Learn more</a>
+                                    <a href="#" class="text-warning">Leer más</a>
                                 </div>
                             </div>
                         </card>

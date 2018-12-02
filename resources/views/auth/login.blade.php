@@ -15,6 +15,7 @@
     </li>
 @endsection
 @section('content')
+
     <section class="section section-shaped section-lg">
       <div class="shape shape-style-1 bg-gradient-default">
         <span></span>

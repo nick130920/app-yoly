@@ -6,16 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Start your development with a Design System for Bootstrap 4.">
   <meta name="author" content="Yoly Shoes">
-  <title>Yoly Shoes</title>
+  <title>@yield('title','Yoly Shoes')</title>
   <!-- Favicon -->
-  <link href="{{asset('/img/brand/favicon.png')}}" rel="icon" type="image/png">
+  <link href="{{asset('/img/brand/logo.png')}}" rel="icon" type="image/png">
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
   <!-- Icons -->
   <link href="{{asset('/vendor/nucleo/css/nucleo.css')}}" rel="stylesheet">
   <link href="{{asset('/vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+  <link href="{{asset('css/nucleo-icons.css')}}" rel="stylesheet">
   <!-- Argon CSS -->
   <link type="text/css" href="{{asset('/css/argon.css?v=1.0.1')}}" rel="stylesheet">
+  <!-- material dashboard CSS -->
+  <link href="../assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet">
   <!-- Docs CSS -->
   <link type="text/css" href="{{asset('/css/docs.min.css')}}" rel="stylesheet">
 </head>
@@ -35,7 +39,7 @@
             <div class="row">
               <div class="col-6 collapse-brand">
                 <a href="{{ route('welcome') }}">
-                  <img src="{{asset('/img/brand/blue.png')}}">
+                  <img src="{{asset('/img/brand/blueyoly.png')}}">
                 </a>
               </div>
               <div class="col-6 collapse-close">
@@ -69,7 +73,7 @@
                     </div>
                     <div class="media-body ml-3">
                       <h6 class="heading text-primary mb-md-1">Foundation</h6>
-                      <p class="description d-none d-md-inline-block mb-0">Learn more about colors, typography, icons and the grid system we used for Argon.</p>
+                      <p class="description d-none d-md-inline-block mb-0">Leer más about colors, typography, icons and the grid system we used for Argon.</p>
                     </div>
                   </a>
                   <a href="https://demos.creative-tim.com/argon-design-system/docs/components/alerts.html" class="media d-flex align-items-center">
@@ -124,7 +128,6 @@
             @guest
             @yield('login')
             @yield('registro')
-
             @else
                 <li class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -137,7 +140,7 @@
                                          document.getElementById('logout-form').submit();">
                             {{ __('Cerrar sesión') }}
                         </a>
-
+                        @yield('perfil')
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>
@@ -152,8 +155,8 @@
     </nav>
   </header>
   <main>
-    @yield('content')
 
+      @yield('content')
 
 
   </main>
@@ -166,20 +169,19 @@
       <div class="row row-grid align-items-center mb-5">
         <div class="col-lg-6">
           <h3 class="text-primary font-weight-light mb-2">¡Gracias por apoyarnos!</h3>
-          <h4 class="mb-0 font-weight-light">
-Pongámonos en contacto con cualquiera de estas plataformas.!</h4>
+          <h4 class="mb-0 font-weight-light">Pongámonos en contacto con cualquiera de estas plataformas.!</h4>
         </div>
         <div class="col-lg-6 text-lg-center btn-wrapper">
-          <a target="_blank" href="https://twitter.com/yolyshoes" class="btn btn-neutral btn-icon-only btn-twitter btn-round btn-lg" data-toggle="tooltip" data-original-title="Follow us">
+          <a target="_blank" href="https://twitter.com/yolyshoes" class="btn btn-neutral btn-icon-only btn-twitter btn-round btn-lg" data-toggle="tooltip" data-original-title="Siguenos">
             <i class="fa fa-twitter"></i>
           </a>
-          <a target="_blank" href="https://www.facebook.com/yolyshoes" class="btn btn-neutral btn-icon-only btn-facebook btn-round btn-lg" data-toggle="tooltip" data-original-title="Like us">
+          <a target="_blank" href="https://www.facebook.com/yolyshoes" class="btn btn-neutral btn-icon-only btn-facebook btn-round btn-lg" data-toggle="tooltip" data-original-title="like">
             <i class="fa fa-facebook-square"></i>
           </a>
-          <a target="_blank" href="https://dribbble.com/yolyshoes" class="btn btn-neutral btn-icon-only btn-dribbble btn-lg btn-round" data-toggle="tooltip" data-original-title="Follow us">
+          <a target="_blank" href="https://dribbble.com/yolyshoes" class="btn btn-neutral btn-icon-only btn-dribbble btn-lg btn-round" data-toggle="tooltip" data-original-title="Siguenos">
             <i class="fa fa-dribbble"></i>
           </a>
-          <a target="_blank" href="https://github.com/yolyshoes" class="btn btn-neutral btn-icon-only btn-github btn-round btn-lg" data-toggle="tooltip" data-original-title="Star on Github">
+          <a target="_blank" href="https://github.com/yolyshoes" class="btn btn-neutral btn-icon-only btn-github btn-round btn-lg" data-toggle="tooltip" data-original-title="Github">
             <i class="fa fa-github"></i>
           </a>
         </div>
@@ -198,7 +200,7 @@ Pongámonos en contacto con cualquiera de estas plataformas.!</h4>
               <a href="https://www.yolyshoes.com" class="nav-link" target="_blank">Yoly Shoes</a>
             </li>
             <li class="nav-item">
-              <a href="https://www.yolyshoes.com/presentation" class="nav-link" target="_blank">About Us</a>
+              <a href="https://www.yolyshoes.com/presentation" class="nav-link" target="_blank">Sobre nosotros</a>
             </li>
             <li class="nav-item">
               <a href="https://www.yolyshoes/blog.com" class="nav-link" target="_blank">Blog</a>
@@ -218,6 +220,6 @@ Pongámonos en contacto con cualquiera de estas plataformas.!</h4>
   <script src="{{asset('vendor/bootstrap/bootstrap.min.js')}}"></script>
   <script src="{{asset('vendor/headroom/headroom.min.js')}}"></script>
   <!-- Argon JS -->
-  <script src="{{asset('/js/argon.js?v=1.0.1')}}"></script> </body>
-
+  <script src="{{asset('/js/argon.js?v=1.0.1')}}"></script>
+ </body>
 </html>

@@ -2,8 +2,7 @@
 
 @section('content')
 <div class="position-relative">
-
-    <!-- shape Hero -->
+ <!-- shape Hero -->
     <section class="section section-lg section-shaped pb-250">
         <div class="shape shape-style-1 shape-default shape-skew alpha-4">
             <span></span>
@@ -16,30 +15,22 @@
             <span></span>
             <span></span>
         </div>
-        <div class="alert alert-info alert-dismissible fade show" role="alert">
-          <span class="alert-inner--icon"><i class="ni ni-like-2"></i></span>
-          <span class="alert-inner--text"><strong>Exito!</strong> Te has logueado!</span>
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
         <div class="container py-lg-md d-flex">
-
             <div class="col px-0">
                 <div class="row">
                     <div class="col-lg-6">
-                        <h1 class="display-3  text-white">A beautiful Design System
-                            <span>completed with examples</span>
+                        <h1 class="display-3 text-ente">Yoly Shoes
+                            <span></span>
                         </h1>
-                        <p class="lead  text-white">The design system comes with four pre-built pages to help you get started faster. You can change the text and images and you're good to go.</p>
+                        <p class="lead  text-white">Compras en linea de los mejores zapatos.</p>
                         <div class="btn-wrapper">
                             <a href="https://demos.creative-tim.com/argon-design-system/docs/components/alerts.html" class="btn btn-info btn-icon mb-3 mb-sm-0">
                                 <span class="btn-inner--icon"><i class="fa fa-code"></i></span>
-                                <span class="btn-inner--text">Components</span>
+                                <span class="btn-inner--text">¿Como comprar?</span>
                             </a>
                             <a href="https://www.creative-tim.com/product/argon-design-system" class="btn btn-white btn-icon mb-3 mb-sm-0">
-                                <span class="btn-inner--icon"><i class="ni ni-cloud-download-95"></i></span>
-                                <span class="btn-inner--text">Download HTML</span>
+                                <span class="btn-inner--icon"><i class="fa fa-play"></i></span>
+                                <span class="btn-inner--text">mira...</span>
                             </a>
                         </div>
                     </div>
@@ -49,7 +40,7 @@
     </section>
     <!-- 1st Hero Variation -->
 </div>
-<section class="section section-lg pt-lg-0 mt--200">
+<!-- <section class="section section-lg pt-lg-0 mt--200">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-12">
@@ -60,14 +51,14 @@
                                 <div class="icon icon-shape icon-shape-primary rounded-circle mb-4">
                                     <i class="ni ni-check-bold"></i>
                                 </div>
-                                <h6 class="text-primary text-uppercase">Download Argon</h6>
-                                <p class="description mt-3">Argon is a great free UI package based on Bootstrap 4 that includes the most important components and features.</p>
+                                <h6 class="text-primary text-uppercase">Calidad</h6>
+                                <p class="description mt-3">los mejores productos con calidad asegurada para tu comodidad y satisfacción al momento de caminar.</p>
                                 <div>
-                                    <span class="badge badge-pill badge-primary">design</span>
-                                    <span class="badge badge-pill badge-primary">system</span>
-                                    <span class="badge badge-pill badge-primary">creative</span>
+                                    <span class="badge badge-pill badge-primary">Cuero</span>
+                                    <span class="badge badge-pill badge-primary">sintetico</span>
+                                    <span class="badge badge-pill badge-primary">tela</span>
                                 </div>
-                                <a href="#" class="btn btn-primary mt-4">Learn more</a>
+                                <a href="#" class="btn btn-primary mt-4">Leer más</a>
                             </div>
                         </div>
                     </div>
@@ -77,14 +68,14 @@
                                 <div class="icon icon-shape icon-shape-success rounded-circle mb-4">
                                     <i class="ni ni-istanbul"></i>
                                 </div>
-                                <h6 class="text-success text-uppercase">Build Something</h6>
-                                <p class="description mt-3">Argon is a great free UI package based on Bootstrap 4 that includes the most important components and features.</p>
+                                <h6 class="text-success text-uppercase">Variedad</h6>
+                                <p class="description mt-3">Yoly shoes tiene una gran variedad en productos para los diferentes gustos, desde sandalias hasta tacón alto.</p>
                                 <div>
-                                    <span class="badge badge-pill badge-success">business</span>
-                                    <span class="badge badge-pill badge-success">vision</span>
-                                    <span class="badge badge-pill badge-success">success</span>
+                                    <span class="badge badge-pill badge-success">Sandalias</span>
+                                    <span class="badge badge-pill badge-success">Tacones</span>
+                                    <span class="badge badge-pill badge-success">Botas</span>
                                 </div>
-                                <a href="#" class="btn btn-success mt-4">Learn more</a>
+                                <a href="#" class="btn btn-success mt-4">Leer más</a>
                             </div>
                         </div>
                     </div>
@@ -94,14 +85,14 @@
                                 <div class="icon icon-shape icon-shape-warning rounded-circle mb-4">
                                     <i class="ni ni-planet"></i>
                                 </div>
-                                <h6 class="text-warning text-uppercase">Prepare Launch</h6>
-                                <p class="description mt-3">Argon is a great free UI package based on Bootstrap 4 that includes the most important components and features.</p>
+                                <h6 class="text-warning text-uppercase">Seguridad</h6>
+                                <p class="description mt-3">Satisfacción asegurada, verificamos que sus compras lleguen al lugar indicado, seguridad a la hora de comprar.</p>
                                 <div>
                                     <span class="badge badge-pill badge-warning">marketing</span>
                                     <span class="badge badge-pill badge-warning">product</span>
                                     <span class="badge badge-pill badge-warning">launch</span>
                                 </div>
-                                <a href="#" class="btn btn-warning mt-4">Learn more</a>
+                                <a href="#" class="btn btn-warning mt-4">Leer más</a>
                             </div>
                         </div>
                     </div>
@@ -109,7 +100,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <section class="section section-lg">
     <div class="container">
         <div class="row row-grid align-items-center">
@@ -228,7 +219,7 @@
                             <div class="pl-4">
                                 <h5 class="title text-success">Awesome Support</h5>
                                 <p>The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and that process will continue whatever.</p>
-                                <a href="#" class="text-success">Learn more</a>
+                                <a href="#" class="text-success">Leer más</a>
                             </div>
                         </div>
                     </div>
@@ -244,7 +235,7 @@
                             <div class="pl-4">
                                 <h5 class="title text-warning">Modular Components</h5>
                                 <p>The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and that process will continue whatever.</p>
-                                <a href="#" class="text-warning">Learn more</a>
+                                <a href="#" class="text-warning">Leer más</a>
                             </div>
                         </div>
                     </div>
@@ -259,7 +250,7 @@
         </svg>
     </div>
 </section>
-<section class="section section-lg">
+<!-- <section class="section section-lg">
     <div class="container">
         <div class="row justify-content-center text-center mb-lg">
             <div class="col-lg-8">
@@ -358,18 +349,24 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <section class="section section-lg pt-0">
     <div class="container">
         <div class="card bg-gradient-warning shadow-lg border-0">
             <div class="p-5">
                 <div class="row align-items-center">
                     <div class="col-lg-8">
-                        <h3 class="text-white">We made website building easier for you.</h3>
-                        <p class="lead text-white mt-3">I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture.</p>
+
+                        <h3 class="text-white">Nosotros hacemos un sitio construido para tu satisfacción.</h3>
+                          <h2 class="text-white">¿Por qué Yoly Shoes?</h3>
+                        <p class="lead text-white mt-3">Puedes revisar nuestra relación completa de productos, comparar precios y realizar tus pedidos cuando estés segura</p>
                     </div>
                     <div class="col-lg-3 ml-lg-auto">
-                        <a href="https://www.creative-tim.com/product/argon-design-system" class="btn btn-lg btn-block btn-white">Download HTML</a>
+
+                        <a href="#" class="btn btn-lg btn-block btn-white">
+                                <span class="btn-inner--icon"><i class="fa fa-code"></i></span>
+                                <span class="btn-inner--text">Productos</span>
+                            </a>
                     </div>
                 </div>
             </div>
@@ -380,11 +377,11 @@
     <div class="container pt-lg pb-300">
         <div class="row text-center justify-content-center">
             <div class="col-lg-10">
-                <h2 class="display-3 text-white">Build something</h2>
-                <p class="lead text-white">According to the National Oceanic and Atmospheric Administration, Ted, Scambos, NSIDClead scentist, puts the potentially record low maximum sea ice extent tihs year down to low ice.</p>
+                <h2 class="display-3 text-white">Construir relación</h2>
+                <!-- <p class="lead text-white">According to the National Oceanic and Atmospheric Administration, Ted, Scambos, NSIDClead scentist, puts the potentially record low maximum sea ice extent tihs year down to low ice.</p> -->
             </div>
         </div>
-        <div class="row row-grid mt-5">
+        <!-- <div class="row row-grid mt-5">
             <div class="col-lg-4">
                 <div class="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
                     <i class="ni ni-settings text-primary"></i>
@@ -406,7 +403,7 @@
                 <h5 class="text-white mt-3">Launch time</h5>
                 <p class="text-white mt-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
-        </div>
+        </div> -->
     </div>
     <!-- SVG separator -->
     <div class="separator separator-bottom separator-skew zindex-100">
@@ -421,14 +418,14 @@
             <div class="col-lg-8">
                 <div class="card bg-gradient-secondary shadow">
                     <div class="card-body p-lg-5">
-                        <h4 class="mb-1">Want to work with us?</h4>
-                        <p class="mt-0">Your project is very important to us.</p>
+                        <h4 class="mb-1">¿Quieres hablar con nosotros?</h4>
+                        <p class="mt-0">Tu opinión es muy importante.</p>
                         <div class="form-group mt-5">
                             <div class="input-group input-group-alternative">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="ni ni-user-run"></i></span>
                                 </div>
-                                <input class="form-control" placeholder="Your name" type="text">
+                                <input class="form-control" placeholder="Nombre" type="text">
                             </div>
                         </div>
                         <div class="form-group">
@@ -436,14 +433,14 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                                 </div>
-                                <input class="form-control" placeholder="Email address" type="email">
+                                <input class="form-control" placeholder="Email" type="email">
                             </div>
                         </div>
                         <div class="form-group mb-4">
-                            <textarea class="form-control form-control-alternative" name="name" rows="4" cols="80" placeholder="Type a message..."></textarea>
+                            <textarea class="form-control form-control-alternative" name="name" rows="4" cols="80" placeholder="Escribenos..."></textarea>
                         </div>
                         <div>
-                            <button type="button" class="btn btn-default btn-round btn-block btn-lg">Send Message</button>
+                            <button type="button" class="btn btn-default btn-round btn-block btn-lg">Enviar mensaje</button>
                         </div>
                     </div>
                 </div>
@@ -451,7 +448,7 @@
         </div>
     </div>
 </section>
-<section class="section section-lg">
+<!-- <section class="section section-lg">
     <div class="container">
         <div class="row row-grid justify-content-center">
             <div class="col-lg-8 text-center">
@@ -501,7 +498,6 @@
         </div>
     </div>
 </section>
-
 <footer class="footer has-cards">
     <div class="container container-lg">
         <div class="row">
@@ -521,5 +517,5 @@
             </div>
         </div>
     </div>
-</footer>
+</footer> -->
 @endsection

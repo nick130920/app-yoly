@@ -1,6 +1,6 @@
-/*!
 
 =========================================================
+/*!
 * Argon Design System - v1.0.1
 =========================================================
 
@@ -14771,7 +14771,7 @@ a.btn-icon-only
 
 .card
 {
-    position: relative;
+  position: relative;
 }
 
 .profile-page .card-profile
@@ -17194,7 +17194,7 @@ textarea[resize='horizontal']
 .section-shaped .shape
 {
     position: absolute;
-    z-index: -1;
+    z-index: -3;
     top: 0;
 
     width: 100%;
@@ -18778,4 +18778,74 @@ html:not([dir='rtl']) .noUi-horizontal .noUi-handle
 }
 small.ini {
     color: #fff;
+}
+
+h1.text-ente:hover {
+    text-align: center;
+    color: #fff;
+    text-shadow: 7px 4px 5px #ff0682;
+}
+
+.text-ente {
+      font-family: 'Pacifico', cursive;
+    font-size: 4.8rem;
+    color: #ff0682;
+    text-shadow: 3px 3px 1px #fff;
+    width: max-content;
+    margin-right: auto;
+    margin-top: 0px;
+}
+.rownick {
+    display: block;
+}
+h2.ini {
+    color: #fff;
+    font-family: pacifico;
+}
+.col-lg-4   {
+    margin-bottom: 4%;
+}
+.nick{
+  max-height: 486px;
+  min-height: 486px;
+
+}
+.mins {
+    height: 126px;
+}
+
+.nn.bg-gradient-warning {
+    -webkit-transform: skewY(12deg);
+    -webkit-transform-origin: 0;
+    transform: skewY(12deg);
+    transform-origin: right;
+    width: 100%;
+    z-index: -3;
+    position: absolute;
+    height: 300px;
+}
+.shape.shape-style-1.shape-default.shape-skew.alpha-4.bg-gradient-warning {
+    z-index: -1;
+}
+.row.row-grid.align-items-center {
+    width: 100%;
+}
+.mora.card-header.card-header-primary {
+    background: linear-gradient(150deg,#d782d9 17%,#8f6ed5 54%, #1467f9 111%) !important;
+    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(156, 39, 176, 0.4);
+    color: #fff;
+}
+h4.card-title.mt-0 {
+    color: #fff;
+}
+ul.pagination {
+    margin: auto;
+    width: 55%;
+}
+a.ico.btn.btn-1 {
+    margin: 0px;
+    padding: 7px;
+}
+th.acti {
+    width: 14%;
 }
