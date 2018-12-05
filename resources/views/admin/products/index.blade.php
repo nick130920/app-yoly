@@ -45,94 +45,6 @@
     </section>
     <!-- 1st Hero Variation -->
 </div>
-
-<!-- <section class="section section-lg">
-    <div class="container">
-        <div class="row row-grid align-items-center">
-            <div class="col-md-6 order-md-2">
-                <img src="{{asset('/img/theme/promo-1.png')}}" class="img-fluid floating">
-            </div>
-            <div class="col-md-6 order-md-1">
-                <div class="pr-md-5">
-                    <div class="icon icon-lg icon-shape icon-shape-success shadow rounded-circle mb-5">
-                        <i class="ni ni-settings-gear-65"></i>
-                    </div>
-                    <h3>Awesome features</h3>
-                    <p>The kit comes with three pre-built pages to help you get started faster. You can change the text and images and you're good to go.</p>
-                    <ul class="list-unstyled mt-5">
-                        <li class="py-2">
-                            <div class="d-flex align-items-center">
-                                <div>
-                                    <div class="badge badge-circle badge-success mr-3">
-                                        <i class="ni ni-settings-gear-65"></i>
-                                    </div>
-                                </div>
-                                <div>
-                                    <h6 class="mb-0">Carefully crafted components</h6>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="py-2">
-                            <div class="d-flex align-items-center">
-                                <div>
-                                    <div class="badge badge-circle badge-success mr-3">
-                                        <i class="ni ni-html5"></i>
-                                    </div>
-                                </div>
-                                <div>
-                                    <h6 class="mb-0">Amazing page examples</h6>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="py-2">
-                            <div class="d-flex align-items-center">
-                                <div>
-                                    <div class="badge badge-circle badge-success mr-3">
-                                        <i class="ni ni-satisfied"></i>
-                                    </div>
-                                </div>
-                                <div>
-                                    <h6 class="mb-0">Super friendly support team</h6>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
-<!-- <section class="section bg-secondary">
-    <div class="container">
-        <div class="row row-grid align-items-center">
-            <div class="col-md-6">
-                <div class="card bg-default shadow border-0">
-                    <img src="{{asset('/img/theme/img-1-1200x1000.jpg')}}" class="card-img-top">
-                    <blockquote class="card-blockquote">
-                        <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95" class="svg-bg">
-                            <polygon points="0,52 583,95 0,95" class="fill-default" />
-                            <polygon points="0,42 583,95 683,0 0,95" opacity=".2" class="fill-default" />
-                        </svg>
-                        <h4 class="display-3 font-weight-bold text-white">Design System</h4>
-                        <p class="lead text-italic text-white">The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and that process will continue whatever happens.</p>
-                    </blockquote>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="pl-md-5">
-                    <div class="icon icon-lg icon-shape icon-shape-warning shadow rounded-circle mb-5">
-                        <i class="ni ni-settings"></i>
-                    </div>
-                    <h3>Our customers</h3>
-                    <p class="lead">Don't let your uses guess by attaching tooltips and popoves to any element. Just make sure you enable them first via JavaScript.</p>
-                    <p>The kit comes with three pre-built pages to help you get started faster. You can change the text and images and you're good to go.</p>
-                    <p>The kit comes with three pre-built pages to help you get started faster. You can change the text and images and you're good to go.</p>
-                    <a href="#" class="font-weight-bold text-warning mt-5">A beautiful UI Kit for impactful websites</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
 <section class="section section-lg section-shaped pb-250 ">
   <div class="shape shape-style-1 shape-default shape-skew alpha-4 bg-gradient-warning">
       <span></span>
@@ -153,6 +65,10 @@
               <div class="mora card-header card-header-primary">
                 <h4 class="card-title mt-0">Tabla de productos</h4>
                 <p class="card-category">Encontraras todos los productos</p>
+                <a href="{{url('/admin/products/create')}}" class="btn btn-1 btn-out-warning" >
+                  <span class="btn-inner--icon"><i class="fa fa-plus-square"></i></span>
+                <span class="btn-inner--text">Nuevo producto</span>
+                </a>
               </div>
               <div class="card-body">
                 <div class="table-responsive">
@@ -170,23 +86,33 @@
                      </thead>
                      <tbody>
                        @foreach ($products as $product)
-                       <tr>
+
+                       <tr data-toggle="tooltip" data-html="true" title="<img class='image' src='{{asset('/img/theme/team-1-800x800.jpg')}}'>" data-placement="right" rel="tooltip">
                          <td>{{ $product->id}}</td>
                          <td>{{ $product->name}}</td>
                          <td>{{ $product->description}}</td>
                          <td>{{ $product->reference}}</td>
-                         <td>{{ $product->category->name}}</td>
+                         <td>{{ $product->category ? $product->category->name : 'General'}}</td>
                          <td>{{ $product->price}}</td>
                          <td class="td-actions text-right">
-                           <a href="" rel="tooltip" title="Ver producto" class="ico btn btn-1 btn-outline-info">
-                             <i class="fa fa-info"></i>
-                           </a>
-                           <a href="" class="ico btn btn-1 btn-outline-success" title="Ver producto">
-                            <i class="tim-icons icon-settings-gear-63"></i>
-                          </a>
-                          <a href="" class="ico btn btn-1 btn-outline-warning" title="Ver producto">
-                           <i class="tim-icons icon-trash-simple"></i>
-                         </a>
+                           <div class="act">
+                             <a href=""  data-toggle="tooltip" data-placement="top" rel="tooltip" title="Ver producto" class="ico btn btn-1 btn-outline-info">
+                               <i class="fa fa-info"></i>
+                             </a>
+                             <a href="{{url('/admin/products/'.$product->id.'/edit')}}" data-toggle="tooltip" data-placement="bottom" class="ico btn btn-1 btn-outline-success" title="Editar producto">
+                               <i class="tim-icons icon-settings-gear-63"></i>
+                             </a>
+                             <a href="{{url('/admin/products/'.$product->id.'/images')}}" data-toggle="tooltip" data-placement="bottom" class="ico btn btn-1 btn-outline-warning" title="Imagenes del producto">
+                               <i class="fa fa-image"></i>
+                             </a>
+                             <form method="post" action="{{url('/admin/products/'.$product->id)}}">
+                               {{csrf_field()}}
+                               {{method_field('DELETE')}}
+                               <button  type="submit" data-toggle="tooltip" data-placement="right" class="li ico btn btn-1 btn-outline-danger" title="Eliminar producto">
+                                 <i class="tim-icons icon-trash-simple"></i>
+                               </button>
+                             </form>
+                           </div>
                          </td>
                        </tr>
                        @endforeach
@@ -208,29 +134,6 @@
                 <!-- <p class="lead text-white">According to the National Oceanic and Atmospheric Administration, Ted, Scambos, NSIDClead scentist, puts the potentially record low maximum sea ice extent tihs year down to low ice.</p> -->
             </div>
         </div>
-        <!-- <div class="row row-grid mt-5">
-            <div class="col-lg-4">
-                <div class="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
-                    <i class="ni ni-settings text-primary"></i>
-                </div>
-                <h5 class="text-white mt-3">Building tools</h5>
-                <p class="text-white mt-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-            <div class="col-lg-4">
-                <div class="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
-                    <i class="ni ni-ruler-pencil text-primary"></i>
-                </div>
-                <h5 class="text-white mt-3">Grow your market</h5>
-                <p class="text-white mt-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-            <div class="col-lg-4">
-                <div class="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
-                    <i class="ni ni-atom text-primary"></i>
-                </div>
-                <h5 class="text-white mt-3">Launch time</h5>
-                <p class="text-white mt-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div> -->
     </div>
     <!-- SVG separator -->
     <div class="separator separator-bottom separator-skew zindex-100">

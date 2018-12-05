@@ -18834,6 +18834,7 @@ h2.ini {
     background: linear-gradient(150deg,#d782d9 17%,#8f6ed5 54%, #1467f9 111%) !important;
     box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(156, 39, 176, 0.4);
     color: #fff;
+    height: 150px;
 }
 h4.card-title.mt-0 {
     color: #fff;
@@ -18848,4 +18849,96 @@ a.ico.btn.btn-1 {
 }
 th.acti {
     width: 14%;
+}
+img.image {
+    width: 100%;
+}
+a.btn.btn-1.btn-out-warning{
+    width: 300px;
+    left: 65%;
+    top: -86px;
+    bottom: 0px;
+    height: 75px;
+}
+a.btn.btn-1.btn-out-warning {
+    padding-top: 20px;
+    font-family: cursive;
+    font-size: 1.2em;
+    color: #ffffff;
+    border-color: #ffffff;
+    background-color: #ff00e53d;
+    background-image: none;
+}
+a.btn.btn-1.btn-out-warning:hover {
+    color: #fff;
+    border-color: #ff00e9;
+    background-color: #ff00e9ab;
+}
+.ni.form-group {
+    display: flex;
+}
+.no.input-group.input-group-alternative.mb-3 {
+    margin-right: 20px;
+}
+.ne.input-group.input-group-alternative.mb-3 {
+    width: 50%;
+}
+h2.re {
+    color: #fff;
+    font-family: 'Pacifico', cursive;
+    font-size: 4rem;
+    text-shadow: 3px 3px 1px #ff0682;
+    width: max-content;
+    margin: auto;
+}
+h2.re:hover {
+    text-align: center;
+    color: #ff0682;
+    text-shadow: 7px 4px 5px #fff;
+}
+.act {
+    display: inline-flex;
+}
+button.li.ico.btn.btn-1.btn-outline-danger {
+    margin: 0px;
+    padding: 7px;
+}
+a.ico.btn.btn-1.btn-outline-info {
+    width: 30px;
+}
+a.btn.btn-2.btn-1.btn-out-warning {
+    left: 0;
+    top: 0;
+    height: 60px;
+    color: #ef0dd8;
+    background: #fff;
+}
+a.btn.btn-2.btn-1.btn-out-warning:hover {
+    color: #fff;
+    background: #ef0dd8;
+}
+.thumbnail {
+    box-shadow: 5px 4px 18px #000;
+    display: block;
+    padding: 4px;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-transition: border .2s ease-in-out;
+    -o-transition: border .2s ease-in-out;
+    transition: border .2s ease-in-out;
+}
+.thumbnail:hover {
+    box-shadow: -5px -4px 18px #000;
+    transform: rotate(3deg) scale(1);
+}
+.need.container.py-lg-md.d-flex {
+    bottom: 260px;
+    position: relative;
+}
+
+hr.ha {
+    margin: 10px;
 }

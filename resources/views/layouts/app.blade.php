@@ -18,7 +18,20 @@
   <link href="{{asset('css/nucleo-icons.css')}}" rel="stylesheet">
   <!-- Argon CSS -->
   <link type="text/css" href="{{asset('/css/argon.css?v=1.0.1')}}" rel="stylesheet">
-  <!-- material dashboard CSS -->
+  <!-- bootstrap 4  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" crossorigin="anonymous">
+    <link href="../css/fileinput.css" media="all" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" crossorigin="anonymous">
+    <link href="../themes/explorer-fas/theme.css" media="all" rel="stylesheet" type="text/css"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="../js/plugins/sortable.js" type="text/javascript"></script>
+    <script src="../js/fileinput.js" type="text/javascript"></script>
+    <script src="../js/locales/fr.js" type="text/javascript"></script>
+    <script src="../js/locales/es.js" type="text/javascript"></script>
+    <script src="../themes/fas/theme.js" type="text/javascript"></script>
+    <script src="../themes/explorer-fas/theme.js" type="text/javascript"></script>
+      <!-- material dashboard CSS -->
   <link href="../assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet">
   <!-- Docs CSS -->
   <link type="text/css" href="{{asset('/css/docs.min.css')}}" rel="stylesheet">
@@ -134,16 +147,26 @@
                         {{ Auth::user()->name }} <span class="caret"></span>
                     </a>
 
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                      @if (auth()->user()->admin)
+                      <li>
+                        <a class="dropdown-item" href="{{ url('/admin/products') }}">{{ __('Gestionar Productos') }}</a>
+                      </li>
+                      @endif
+                      <li>
+                        <a class="dropdown-item" href="{{ route('perfil') }}">{{ __('Perfil') }}</a>
+                      </li>
+
+                      <li>
                         <a class="dropdown-item" href="{{ route('logout') }}"
                            onclick="event.preventDefault();
                                          document.getElementById('logout-form').submit();">
                             {{ __('Cerrar sesión') }}
                         </a>
-                        @yield('perfil')
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>
+                        </li>
                     </div>
                 </li>
             @endguest
