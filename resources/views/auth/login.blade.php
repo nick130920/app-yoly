@@ -8,7 +8,7 @@
             <span class="btn-inner--icon">
               <i class="fa fa-address-card-o"></i>
             </span>
-            <span class="nav-link-inner--text">{{ __('Register') }}</span>
+            <span class="nav-link-inner--text">{{ __('Registro') }}</span>
             </a>
         </li>
         @endif

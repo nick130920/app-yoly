@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Start your development with a Design System for Bootstrap 4.">
-  <meta name="author" content="Yoly Shoes">
+  <meta name="description" content="Yoly Shoes empresa de comercialización de zapatos para dama.">
+  <meta name="author" content="Nicolás Muñoz">
   <title>@yield('title','Yoly Shoes')</title>
   <!-- Favicon -->
   <link href="{{asset('/img/brand/logo.png')}}" rel="icon" type="image/png">
@@ -16,23 +16,14 @@
   <link href="{{asset('/vendor/nucleo/css/nucleo.css')}}" rel="stylesheet">
   <link href="{{asset('/vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
   <link href="{{asset('css/nucleo-icons.css')}}" rel="stylesheet">
+  <!-- CSS -->
+    {{-- <link type="text/css" href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet" /> --}}
+    {{-- <link type="text/css" href="{{asset('assets/css/material-kit.css?v=1.2.1')}}" rel="stylesheet"/> --}}
+
   <!-- Argon CSS -->
+  <link rel="stylesheet" href="{{asset('/css/style_select.css')}}">
   <link type="text/css" href="{{asset('/css/argon.css?v=1.0.1')}}" rel="stylesheet">
-  <!-- bootstrap 4  -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" crossorigin="anonymous">
-    <link href="../css/fileinput.css" media="all" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" crossorigin="anonymous">
-    <link href="../themes/explorer-fas/theme.css" media="all" rel="stylesheet" type="text/css"/>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-    <script src="../js/plugins/sortable.js" type="text/javascript"></script>
-    <script src="../js/fileinput.js" type="text/javascript"></script>
-    <script src="../js/locales/fr.js" type="text/javascript"></script>
-    <script src="../js/locales/es.js" type="text/javascript"></script>
-    <script src="../themes/fas/theme.js" type="text/javascript"></script>
-    <script src="../themes/explorer-fas/theme.js" type="text/javascript"></script>
-      <!-- material dashboard CSS -->
-  <link href="../assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet">
+
   <!-- Docs CSS -->
   <link type="text/css" href="{{asset('/css/docs.min.css')}}" rel="stylesheet">
 </head>
@@ -67,7 +58,7 @@
             <li class="nav-item dropdown">
               <a href="#" class="nav-link" data-toggle="dropdown" href="#" role="button">
                 <i class="ni ni-ui-04 d-lg-none"></i>
-                <span class="nav-link-inner--text">Components</span>
+                <span class="nav-link-inner--text">Menú</span>
               </a>
               <div class="dropdown-menu dropdown-menu-xl">
                 <div class="dropdown-menu-inner">
@@ -76,7 +67,7 @@
                       <i class="ni ni-spaceship"></i>
                     </div>
                     <div class="media-body ml-3">
-                      <h6 class="heading text-primary mb-md-1">Getting started</h6>
+                      <h6 class="heading text-primary mb-md-1">Perfil</h6>
                       <p class="description d-none d-md-inline-block mb-0">Learn how to use Argon compiling Scss, change brand colors and more.</p>
                     </div>
                   </a>
@@ -236,7 +227,18 @@
       </div>
     </div>
   </footer>
+  <!--   Core JS Files   -->
+	<script src="{{asset('assets/js/jquery.min.js')}}" type="text/javascript"></script>
+	<script src="{{asset('assets/js/bootstrap.min.js')}}" type="text/javascript"></script>
+	<script src="{{asset('assets/js/material.min.js')}}"></script>
+  <!--	Plugin for Tags, full documentation here: http://xoxco.com/projects/code/tagsinput/  -->
+	<script src="{{asset('assets/js/bootstrap-tagsinput.js')}}"></script>
 
+	<!--	Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
+	<script src="{{asset('assets/js/jasny-bootstrap.min.js')}}"></script>
+
+	<!-- Control Center for Material Kit: activating the ripples, parallax effects, scripts from the example pages etc -->
+	<script src="{{asset('assets/js/material-kit.js?v=1.2.1')}}" type="text/javascript"></script>
   <!-- Core -->
   <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
   <script src="{{asset('vendor/popper/popper.min.js')}}"></script>
@@ -244,5 +246,6 @@
   <script src="{{asset('vendor/headroom/headroom.min.js')}}"></script>
   <!-- Argon JS -->
   <script src="{{asset('/js/argon.js?v=1.0.1')}}"></script>
+  <script src="{{asset('js/index.js')}}"></script>
  </body>
 </html>

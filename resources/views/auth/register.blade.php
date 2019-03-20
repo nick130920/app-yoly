@@ -7,7 +7,7 @@
     <span class="btn-inner--icon">
       <i class="ni ni-circle-08"></i>
     </span>
-    <span class="nav-link-inner--text">{{ __('Login') }}</span>
+    <span class="nav-link-inner--text">{{ __('Ingresar') }}</span>
     </a>
 </li>
 @endsection

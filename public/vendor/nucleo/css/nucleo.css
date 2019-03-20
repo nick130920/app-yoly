@@ -15,7 +15,8 @@ License - nucleoapp.com/license/
     base class definition
 -------------------------*/
 .ni {
-  display: inline-block;
+
+    display: inline-flex;
   font: normal normal normal 14px/1 NucleoIcons;
   font-size: inherit;
   text-rendering: auto;

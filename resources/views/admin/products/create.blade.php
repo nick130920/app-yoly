@@ -35,34 +35,70 @@
           <div class="card-body px-lg-5 py-lg-5">
             <form method="post" action="{{ url('/admin/products') }}" role="form">
                 {{csrf_field()}}
-              <div class="ni form-group">
-                <div class="no input-group input-group-alternative mb-3">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="ni ni-circle-08"></i></span>
+                <div class="ni form-gro">
+                  <div class="name form-group">
+                    <div class="no e input-group input-group-alternative mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-circle-08"></i></span>
+                      </div>
+                      <input type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus placeholder="Nombre">
+                    </div>
                   </div>
-                    <input type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus placeholder="Nombre">
-                </div>
-                <div class="ne no input-group input-group-alternative mb-3">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="ni ni-money-coins"></i></span>
+                  <div class="nami form-group">
+                    <div class="ne no input-group input-group-alternative mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-money-coins"></i></span>
+                      </div>
+                      <input type="number" class="form-control" name="price" value="{{ old('price') }}" required  placeholder="Precio" >
+                    </div>
                   </div>
-                  <input type="number" class="form-control" name="price" value="{{ old('price') }}" required  placeholder="Precio" >
-                </div>
-                <div class="ne input-group input-group-alternative mb-3">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="ni ni-collection"></i></span>
+                  <div class="nama form-group">
+                    <div class="ne input-group input-group-alternative mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-collection"></i></span>
+                      </div>
+                      <input type="number" class="form-control" name="reference" value="{{ old('reference') }}" required  placeholder="Referencia" >
+                    </div>
                   </div>
-                  <input type="number" class="form-control" name="reference" value="{{ old('reference') }}" required  placeholder="Referencia" >
                 </div>
-              </div>
-              <div class="form-group">
-                <div class="input-group input-group-alternative">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="ni ni-ruler-pencil"></i></span>
+                <div class="inputs">
+                  <div class="des form-group">
+                    <div class="input-group input-group-alternative">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-ruler-pencil"></i></span>
+                      </div>
+                      <input type="text" class="form-control" name="description" required placeholder="Descripción">
+                    </div>
                   </div>
-                    <input type="text" class="form-control" name="description" required placeholder="Descripción">
+                  <div class="nami mi form-group">
+                    <div class="input-group input-group-alternative mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-bullet-list-67"></i></span>
+                      </div>
+                      <input type="number" class="form-control" name="total"  required  placeholder="Cantidad" >
+                    </div>
+                  </div>
+                  <div class="btn-group bootstrap-select">
+                    <select required class="selectpicker" data-style="btn btn-primary btn-round" title="Single Select" data-size="7" tabindex="-98" name="category">
+                      <option disabled="" selected="">Categoria</option>
+                      <option value="1">{{$categoria_1->name}}</option>
+                      <option value="2">{{$categoria_2->name}}</option>
+                      <option value="3">{{$categoria_3->name}}</option>
+                      <option value="4">{{$categoria_4->name}}</option>
+                      <option value="5">{{$categoria_5->name}}</option>
+                    </select>
+                  </div>
                 </div>
-              </div>
+                {{-- <label id="img_category_label"class="field"for="img_category"data-value="">
+                  <span>Category</span>
+                  <div id="img_category"class="psuedo_select"name="img_category">
+                    <span class="selected"></span>
+                    <ul id="img_category_options"class="options">
+                      <li class="option" data-name="category" data-value="1">Option 1</li>
+                      <li class="option" data-name="category" data-value="2">Option 2</li>
+                    </ul>
+                  </div>
+                </label> --}}
               <textarea class="form-control form-control-alternative" name="long_description" rows="8" cols="80" placeholder="Descripción extensa del producto"></textarea>
               <div class="text-center">
                 <hr>

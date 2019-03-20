@@ -64,7 +64,7 @@
             <div class="card card-plain">
               <div class="mora card-header card-header-primary">
                 <h4 class="card-title mt-0">Tabla de productos</h4>
-                <p class="card-category">Encontraras todos los productos</p>
+                <p class="blanco card-category">Encontraras todos los productos</p>
                 <a href="{{url('/admin/products/create')}}" class="btn btn-1 btn-out-warning" >
                   <span class="btn-inner--icon"><i class="fa fa-plus-square"></i></span>
                 <span class="btn-inner--text">Nuevo producto</span>

@@ -24,43 +24,69 @@
     <!-- 1st Hero Variation -->
 </div>
 <section class="section section-lg pt-lg-0 mt--200">
-    <div class="container">
-      <div class="col-lg-12">
-        <div class="card bg-secondary shadow border-0">
-          <div class="card-header  bg-gradient-defa pb-5">
-            <div class="text-muted text-center mb-3">
-              <h2 class="re">Editar Producto</h1>
+  <div class="container">
+    <div class="col-lg-12">
+      <div class="card bg-secondary shadow border-0">
+        <div class="card-header  bg-gradient-defa pb-5">
+          <div class="text-muted text-center mb-3">
+            <h2 class="re">Editar Producto</h1>
             </div>
           </div>
           <div class="card-body px-lg-5 py-lg-5">
             <form method="post" action="{{ url('/admin/products/'.$product->id.'/edit') }}" role="form">
-                {{csrf_field()}}
-              <div class="ni form-group">
-                <div class="no input-group input-group-alternative mb-3">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="ni ni-circle-08"></i></span>
-                  </div>
+              {{csrf_field()}}
+              <div class="inputs">
+                <div class="name form-group">
+                  <div class="no input-group input-group-alternative mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-circle-08"></i></span>
+                    </div>
                     <input type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ $product->name }}" required autofocus placeholder="Nombre">
-                </div>
-                <div class="ne no input-group input-group-alternative mb-3">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="ni ni-money-coins"></i></span>
                   </div>
-                  <input type="number" step="0.001" class="form-control" name="price" value="{{ $product->price }}" required  placeholder="Precio" >
                 </div>
-                <div class="ne input-group input-group-alternative mb-3">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="ni ni-collection"></i></span>
+                <div class="nami form-group">
+                  <div class="no input-group input-group-alternative mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-money-coins"></i></span>
+                    </div>
+                    <input type="number" step="0.001" class="form-control" name="price" value="{{ $product->price }}" required  placeholder="Precio" >
                   </div>
-                  <input type="number" step="0.001" class="form-control" name="reference" value="{{ $product->reference }}"  required  placeholder="Referencia" >
+                </div>
+                <div class="nama form-group">
+                  <div class="input-group input-group-alternative mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-collection"></i></span>
+                    </div>
+                    <input type="number" step="0.001" class="form-control" name="reference" value="{{ $product->reference }}"  required  placeholder="Referencia" >
+                  </div>
                 </div>
               </div>
-              <div class="form-group">
-                <div class="input-group input-group-alternative">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="ni ni-ruler-pencil"></i></span>
-                  </div>
+              <div class="inputs">
+                <div class="des form-group">
+                  <div class="input-group input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-ruler-pencil"></i></span>
+                    </div>
                     <input type="text" class="form-control" name="description" value="{{ $product->description }}" required placeholder="Descripción">
+                  </div>
+                </div>
+                <div class="nami mi form-group">
+                  <div class="input-group input-group-alternative mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-bullet-list-67"></i></span>
+                    </div>
+                    <input type="number" step="0.001" class="form-control" name="total" value="{{ $product->total }}"  required  placeholder="Cantidad" >
+                  </div>
+                </div>
+                <div class="btn-group bootstrap-select">
+                  <select class="selectpicker" data-style="btn btn-primary btn-round" title="Single Select" data-size="7" tabindex="-98" name="category">
+                    <option selected="" value="{{$product->category_id}}" style="visibility:hidden;">{{$product->category->name}}</option>
+                    <option value="1">{{$categoria_1->name}}</option>
+                    <option value="2">{{$categoria_2->name}}</option>
+                    <option value="3">{{$categoria_3->name}}</option>
+                    <option value="4">{{$categoria_4->name}}</option>
+                    <option value="5">{{$categoria_5->name}}</option>
+                  </select>
                 </div>
               </div>
               <textarea class="form-control form-control-alternative" name="long_description" rows="8" cols="80" placeholder="Descripción extensa del producto">{{ $product->long_description }}</textarea>
@@ -74,12 +100,12 @@
         </div>
       </div>
     </div>
-</section>
+  </section>
 <section class="section section-lg bg-gradient-default">
     <div class="container pt-lg pb-300">
         <div class="row text-center justify-content-center">
             <div class="col-lg-10">
-                <h2 class="display-3 text-white">Construir relación</h2>
+                {{-- <h2 class="display-3 text-white">Construir relación</h2> --}}
                 <!-- <p class="lead text-white">According to the National Oceanic and Atmospheric Administration, Ted, Scambos, NSIDClead scentist, puts the potentially record low maximum sea ice extent tihs year down to low ice.</p> -->
             </div>
         </div>
