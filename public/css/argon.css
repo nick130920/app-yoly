@@ -18871,6 +18871,7 @@ h2.ini {
 .nick{
   max-height: 486px;
   min-height: 486px;
+  min-width: 326px;
 
 }
 .mins {
@@ -18910,11 +18911,16 @@ a.ico.btn.btn-1 {
     margin: 0px;
     padding: 7px;
 }
-th.acti {
-    width: 14%;
-}
 img.image {
     width: 100%;
+}
+th.number {
+    padding-left: 0rem;
+    padding-right: 0rem;
+}
+td.pri {
+    padding-left: 0rem;
+    padding-right: 0rem;
 }
 a.btn.btn-1.btn-out-warning{
     width: 300px;
@@ -18926,7 +18932,7 @@ a.btn.btn-1.btn-out-warning{
 a.btn.btn-1.btn-out-warning {
     padding-top: 20px;
     font-family: cursive;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     color: #ffffff;
     border-color: #ffffff;
     background-color: #ff00e53d;
@@ -18995,9 +19001,9 @@ a.btn.btn-2.btn-1.btn-out-warning:hover {
     background: #ef0dd8;
 }
 .thumbnail {
-    box-shadow: 5px 4px 18px #000;
+    box-shadow: 0px 0px 15px #000;
     display: block;
-    padding: 4px;
+    padding: 1px;
     margin-bottom: 20px;
     line-height: 1.42857143;
     background-color: #fff;
@@ -19008,8 +19014,9 @@ a.btn.btn-2.btn-1.btn-out-warning:hover {
     transition: border .2s ease-in-out;
 }
 .thumbnail:hover {
-    box-shadow: -5px -4px 18px #000;
-    transform: rotate(3deg) scale(1);
+    box-shadow: 0px 0px 20px 2px #000;
+    transform: scale(1.03, 1.03);
+
 }
 .need.container.py-lg-md.d-flex {
     bottom: 260px;
@@ -19064,4 +19071,17 @@ input[type=number] {
 .inputs {
     width: 100%;
     display: inline-flex;
+}
+button.btn-image {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.tabla.container.py-lg-md.d-flex {
+    position: relative;
+    z-index: 100;
+    bottom: 150px;
+}
+button.icon.icon-shape.bg-gradient-primary.rounded-circle.text-white.mb-3 {
+    border: 0px;
 }

@@ -62,7 +62,7 @@
               </a>
               <div class="dropdown-menu dropdown-menu-xl">
                 <div class="dropdown-menu-inner">
-                  <a href="https://demos.creative-tim.com/argon-design-system/docs/getting-started/overview.html" class="media d-flex align-items-center">
+                  <a href="#" class="media d-flex align-items-center">
                     <div class="icon icon-shape bg-gradient-primary rounded-circle text-white">
                       <i class="ni ni-spaceship"></i>
                     </div>
@@ -71,7 +71,7 @@
                       <p class="description d-none d-md-inline-block mb-0">Learn how to use Argon compiling Scss, change brand colors and more.</p>
                     </div>
                   </a>
-                  <a href="https://demos.creative-tim.com/argon-design-system/docs/foundation/colors.html" class="media d-flex align-items-center">
+                  <a href="#" class="media d-flex align-items-center">
                     <div class="icon icon-shape bg-gradient-success rounded-circle text-white">
                       <i class="ni ni-palette"></i>
                     </div>
@@ -80,7 +80,7 @@
                       <p class="description d-none d-md-inline-block mb-0">Leer más about colors, typography, icons and the grid system we used for Argon.</p>
                     </div>
                   </a>
-                  <a href="https://demos.creative-tim.com/argon-design-system/docs/components/alerts.html" class="media d-flex align-items-center">
+                  <a href="#" class="media d-flex align-items-center">
                     <div class="icon icon-shape bg-gradient-warning rounded-circle text-white">
                       <i class="ni ni-ui-04"></i>
                     </div>
@@ -90,16 +90,6 @@
                     </div>
                   </a>
                 </div>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a href="#" class="nav-link" data-toggle="dropdown" href="#" role="button">
-                <i class="ni ni-collection d-lg-none"></i>
-                <span class="nav-link-inner--text">Examples</span>
-              </a>
-              <div class="dropdown-menu">
-                <a href="{{ route('home') }}" class="dropdown-item">Inicio</a>
-                <a href="{{ route('perfil') }}" class="dropdown-item">Perfil</a>
               </div>
             </li>
           </ul>
@@ -122,12 +112,6 @@
                 <span class="nav-link-inner--text d-lg-none">Twitter</span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link nav-link-icon" href="https://github.com/nick130920/app-yoly" target="_blank" data-toggle="tooltip" title="Síguenos en Github">
-                <i class="fa fa-github"></i>
-                <span class="nav-link-inner--text d-lg-none">Github</span>
-              </a>
-            </li>
 
             @guest
             @yield('login')
@@ -139,6 +123,9 @@
                     </a>
 
                     <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                      <li>
+                        <a class="dropdown-item" href="{{ route('home') }}">{{ __('Dashboard') }}</a>
+                      </li>
                       @if (auth()->user()->admin)
                       <li>
                         <a class="dropdown-item" href="{{ url('/admin/products') }}">{{ __('Gestionar Productos') }}</a>
@@ -147,7 +134,6 @@
                       <li>
                         <a class="dropdown-item" href="{{ route('perfil') }}">{{ __('Perfil') }}</a>
                       </li>
-
                       <li>
                         <a class="dropdown-item" href="{{ route('logout') }}"
                            onclick="event.preventDefault();

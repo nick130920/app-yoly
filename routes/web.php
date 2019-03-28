@@ -9,26 +9,29 @@
 */
 
 Route::get('/', 'TestController@welcome')->name('welcome');
-Route::get('/perfil', 'perfil@perfil')->name('perfil');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+//Vistas usuario común
+Route::get('/products/{id}', 'ProductController@show');
+Route::post('/cart', 'CartDetailController@store');
 
-Route::middleware(['auth', 'admin'])->prefix('/admin')->group(function(){
-Route::get('/products/images/kartik-v-bootstrap-fileinput-80f5bb3/examples/', 'TestController@index'); //listado
+Route::get('/perfil', 'perfil@perfil')->name('perfil');
+
+
+
+//Vistas Usuario Administrador
+Route::middleware(['auth', 'admin'])->prefix('/admin')->namespace('Admin')->group(function(){
 Route::get('/products', 'ProductController@index'); //listado
-Route::get('/products/create', 'ProductController@create'); //formulario
+Route::get('/products/create', 'ProductController@create'); //Formulario de Creacion de Producto
 Route::post('/products', 'ProductController@store'); //registrar
 Route::get('/products/{id}/edit', 'ProductController@edit'); //formulario edición
-Route::post('/products/{id}/edit', 'ProductController@update'); //actualizar
-Route::delete('/products/{id}', 'ProductController@destroy'); //formulario
-
+Route::post('/products/{id}/edit', 'ProductController@update'); //Actualizar producto
+Route::delete('/products/{id}', 'ProductController@destroy'); //Eliminar producto
 Route::get('/products/{id}/images', 'ImageController@index'); //listado
 Route::post('/products/{id}/images', 'ImageController@store'); //registrar
-Route::delete('/products/{id}/images', 'ImageController@destroy'); //eliminar
-
-
-
+Route::delete('/products/{id}/images', 'ImageController@destroy'); //Eliminar Imagen
+Route::get('/products/{id}/images/select/{image}', 'ImageController@select'); //Destacar imagen
 });
 //CR
 //UP

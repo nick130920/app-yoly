@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class perfil extends Controller
 {
   public function perfil(){
-    return view('perfil');
+    return view('.auth.perfil');
   }
 }

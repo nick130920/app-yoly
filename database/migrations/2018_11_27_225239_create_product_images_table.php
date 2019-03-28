@@ -15,9 +15,8 @@ class CreateProductImagesTable extends Migration
     {
         Schema::create('product_images', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('images');
-            $table->boolean('feature')->default(false);
-
+            $table->string('image');
+            $table->boolean('featured')->default(false);
             #clave foranea (fk)
             $table->integer('product_id')->unsigned();
             $table->foreign('product_id')->references('id')->on('products');

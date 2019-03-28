@@ -50,90 +50,78 @@
                 <span class="btn-inner--icon"><i class="fa fa-cloud-upload"></i></span>
                 <span class="btn-inner--text">Subir nueva imagen</span>
               </button>
-              <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form" style="display: none;" aria-hidden="true">
-                <div class="c modal-dialog modal- modal-dialog-centered modal-sm" role="document">
+              <!-- Modal -->
+              <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
                   <div class="modal-content">
-                    <div class="modal-body p-0">
-                      <div class="card bg-secondary shadow border-0">
-                        <div class="d card-body px-lg-5 py-lg-5">
-                          <form action="" method="post">
-                            {{ csrf_field() }}
-                            <input type="file" name="photo" required>
-                            <button type="submit" name="button" class="btn btn-primary btn-round">Subir</button>
-                          </form>
-                        </div>
-                      </div>
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form action="" method="post" enctype="multipart/form-data">
+                        {{ csrf_field() }}
+                        <input type="file" name="photo" required>
+                        <button type="submit" name="button" class="btn btn-primary btn-round">Subir</button>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- <a href="{{url('/admin/products/create')}}" class="btn btn-outline-default" ></a> -->
             </div>
             <hr class="ha">
             <div class="row row-grid text-center">
+              <!--{{$modal=1}}-->
               @foreach ($images as $image)
                 <div class="col-sm-4 col-md-4 col-lg-4 col-xs-6">
                   <div class="card">
-                    <img class="thumbnail image" src="{{$image->images}}" alt="Thumbnail Image 1">
-                      <button class="btn btn-icon btn-3 btn-danger" type="button">
+                    <button class="btn-image" type="button" data-toggle="modal" data-target="#exampleModal{{$modal}}">
+                      <img class="thumbnail image" src="{{$image->url}}" alt="Thumbnail Image 1">
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal{{$modal}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <img class="extra thumbnail image" src="{{$image->url}}" alt="Thumbnail Image 1">
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <form action="" method="post">
+                      {{ csrf_field() }}
+                      {{method_field('DELETE')}}
+                      <input type="hidden" name="image_id" value="{{$image->id}}">
+                      <button class="btn btn-icon btn-3 btn-danger" type="submit">
                         <span class="btn-inner--icon"><i class="ni ni-bag-17"></i></span>
                         <span class="btn-inner--text">Eliminar imagen</span>
                       </button>
+                      @if ($image->featured)
+                        <button type="button" data-toggle="tooltip" data-placement="top" title="Imagen destacada" class="icon icon-shape bg-gradient-primary rounded-circle text-white mb-3">
+                          <i class="ni ni-spaceship"></i>
+                        </button>
+                      @else
+                        <a href="{{url('/admin/products/'.$product->id.'/images/select/'.$image->id)}}" class="icon icon-shape bg-gradient-info rounded-circle text-white mb-3" data-toggle="tooltip" data-placement="top" title="Destacar">
+                          <span class="btn-inner--icon"><i class="ni ni-spaceship"></i></span>
+                        </a>
+                      @endif
+                    </form>
                   </div>
                 </div>
+                <!--{{$modal++}}-->
               @endforeach
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="section section-lg bg-gradient-default">
-    <div class="container pt-lg pb-300">
-      <div class="row text-center justify-content-center">
-        <div class="col-lg-10">
-          <h2 class="display-3 text-white">Construir relación</h2>
-          <!-- <p class="lead text-white">According to the National Oceanic and Atmospheric Administration, Ted, Scambos, NSIDClead scentist, puts the potentially record low maximum sea ice extent tihs year down to low ice.</p> -->
-        </div>
-      </div>
-    </div>
-    <!-- SVG separator -->
-    <div class="separator separator-bottom separator-skew zindex-100">
-      <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
-        <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
-      </svg>
-    </div>
-  </section>
-  <section class="section section-lg pt-lg-0 section-contact-us">
-    <div class="container">
-      <div class="row justify-content-center mt--300">
-        <div class="col-lg-8">
-          <div class="card bg-gradient-secondary shadow">
-            <div class="card-body p-lg-5">
-              <h4 class="mb-1">¿Quieres hablar con nosotros?</h4>
-              <p class="mt-0">Tu opinión es muy importante.</p>
-              <div class="form-group mt-5">
-                <div class="input-group input-group-alternative">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="ni ni-user-run"></i></span>
-                  </div>
-                  <input class="form-control" placeholder="Nombre" type="text">
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="input-group input-group-alternative">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="ni ni-email-83"></i></span>
-                  </div>
-                  <input class="form-control" placeholder="Email" type="email">
-                </div>
-              </div>
-              <div class="form-group mb-4">
-                <textarea class="form-control form-control-alternative" name="name" rows="4" cols="80" placeholder="Escribenos..."></textarea>
-              </div>
-              <div>
-                <button type="button" class="btn btn-default btn-round btn-block btn-lg">Enviar mensaje</button>
-              </div>
             </div>
           </div>
         </div>
