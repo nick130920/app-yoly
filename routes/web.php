@@ -13,11 +13,13 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 //Vistas usuario común
-Route::get('/products/{id}', 'ProductController@show');
+Route::get('/products/{id}', 'ProductController@show')->name('show');
 Route::post('/cart', 'CartDetailController@store');
+Route::delete('/cart', 'CartDetailController@destroy');
 
 Route::get('/perfil', 'perfil@perfil')->name('perfil');
 
+Route::post('/order', 'CartController@update');
 
 
 //Vistas Usuario Administrador

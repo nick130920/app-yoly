@@ -29,11 +29,11 @@
               </h1>
               <p class="lead  text-white">Compras en linea de los mejores zapatos.</p>
               <div class="btn-wrapper">
-                <a href="https://demos.creative-tim.com/argon-design-system/docs/components/alerts.html" class="btn btn-info btn-icon mb-3 mb-sm-0">
+                <a href="#" class="btn btn-info btn-icon mb-3 mb-sm-0">
                   <span class="btn-inner--icon"><i class="fa fa-code"></i></span>
                   <span class="btn-inner--text">¿Como comprar?</span>
                 </a>
-                <a href="https://www.creative-tim.com/product/argon-design-system" class="btn btn-white btn-icon mb-3 mb-sm-0">
+                <a href="#" class="btn btn-white btn-icon mb-3 mb-sm-0">
                   <span class="btn-inner--icon"><i class="fa fa-play"></i></span>
                   <span class="btn-inner--text">mira...</span>
                 </a>
@@ -86,7 +86,7 @@
                   </thead>
                   <tbody>
                     @foreach ($products as $product)
-                      @foreach ($product->images as $images)
+                      @foreach ($product as $images)
                         <tr data-toggle="tooltip" data-html="true" title="<img class='image' src='{{$product->featured_image_url}}'>" data-placement="right" rel="tooltip">
                           @break
                         @endforeach

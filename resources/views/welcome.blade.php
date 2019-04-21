@@ -54,11 +54,11 @@
               </h1>
               <p class="lead  text-white">Compra en linea los mejores zapatos.</p>
               <div class="btn-wrapper">
-                <a href="https://demos.creative-tim.com/argon-design-system/docs/components/alerts.html" class="btn btn-info btn-icon mb-3 mb-sm-0">
+                <a href="#vidio" class="btn btn-info btn-icon mb-3 mb-sm-0">
                   <span class="btn-inner--icon"><i class="fa fa-code"></i></span>
                   <span class="btn-inner--text">¿Como comprar?</span>
                 </a>
-                <a href="https://www.creative-tim.com/product/argon-design-system" class="btn btn-white btn-icon mb-3 mb-sm-0">
+                <a href="#vidio" class="btn btn-white btn-icon mb-3 mb-sm-0">
                   <span class="btn-inner--icon"><i class="fa fa-play"></i></span>
                   <span class="btn-inner--text">mira...</span>
                 </a>
@@ -244,7 +244,7 @@
                     <div class="nick card card-lift--hover shadow border-0">
                       <div class="card-body py-5">
                         <div>
-                          <a href="{{url('products/'.$product->id.'')}}" data-toggle="tooltip" data-placement="right" data-original-title="Ver más"><img src="{{$product->featured_image_url}}" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;height: 200px;"></a>
+                          <a href="{{url('show')}}" data-toggle="tooltip" data-placement="right" data-original-title="Ver más"><img src="{{$product->featured_image_url}}" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;height: 200px;"></a>
                         </div>
                         <div class="mins">
                           <h6 class="text-warning text-uppercase">{{ $product->name }}</h6>

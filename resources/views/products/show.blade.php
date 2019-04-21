@@ -65,22 +65,35 @@
               </div>
               <div class="col-lg-4 order-lg-1">
                 <div class="card-profile-stats d-flex justify-content-center">
-                  <div>
+                  {{-- <div>
                     <span class="heading">22</span>
                     <span class="description">Friends</span>
                   </div>
                   <div>
-                    <span class="heading">10</span>
-                    <span class="description">Photos</span>
-                  </div>
-                  <div>
                     <span class="heading">89</span>
                     <span class="description">Comments</span>
+                  </div> --}}
+                  <div>
+                    <span class="heading">{{$images->count()}}</span>
+                    <span class="description">Fotos</span>
                   </div>
                 </div>
               </div>
             </div>
             <div class="text-center">
+              @if (session('notification'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                  <span class="alert-inner--icon">
+                    <i class="ni ni-like-2"></i>
+                  </span>
+                  <span class="alert-inner--text">
+                    <strong>Exito! </strong>{{session('notification')}}
+                  </span>
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+              @endif
               <h3>{{ $product->name }}
                 <span class="font-weight-light"></span>
               </h3>

@@ -18923,7 +18923,6 @@ td.pri {
     padding-right: 0rem;
 }
 a.btn.btn-1.btn-out-warning{
-    width: 300px;
     left: 65%;
     top: -86px;
     bottom: 0px;
@@ -18932,7 +18931,7 @@ a.btn.btn-1.btn-out-warning{
 a.btn.btn-1.btn-out-warning {
     padding-top: 20px;
     font-family: cursive;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #ffffff;
     border-color: #ffffff;
     background-color: #ff00e53d;
