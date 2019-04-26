@@ -7,7 +7,20 @@
 |
 |
 */
-
+Route::get('migrar',[
+  'uses'=> 'TestController@getMigrar',
+  'as' =>'ap1.getMigrar'
+]);
+Route::get('sendmail', function(){
+  $data = array(
+    'name' => "Curso Laravel",
+  );
+  Mail::send('emails.welcome', $data, function($message){
+    $message->from('somumyneiva@gmail.com', 'Curso de laravel');
+    $message->to('somumyneiva@gmail.com')->subject('Test email curso de laravel');
+  });
+  return "Tu email ha sido enviado con exito";
+});
 Route::get('/', 'TestController@welcome')->name('welcome');
 Auth::routes();
 

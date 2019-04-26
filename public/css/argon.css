@@ -6453,11 +6453,10 @@ input[type='button'].btn-block
 
 .alert
 {
+  text-align: center;
     position: relative;
-
     margin-bottom: 1rem;
     padding: 1rem 1.5rem;
-
     border: .0625rem solid transparent;
     border-radius: .25rem;
 }
@@ -19083,4 +19082,19 @@ button.btn-image {
 }
 button.icon.icon-shape.bg-gradient-primary.rounded-circle.text-white.mb-3 {
     border: 0px;
+}
+i.fa.fa-user.fa-lg {
+    margin-right: auto;
+}
+a.btn.btn-icon.btn-3.btn-outline-transparent {
+    color: #ffffff;
+    border-color: #ffffff;
+    background-color: transparent;
+    background-image: none;
+}
+a.btn.btn-icon.btn-3.btn-outline-transparent:hover {
+    color: #6449b3;
+    border-color: #ffffff;
+    background-color: white;
+    background-image: none;
 }

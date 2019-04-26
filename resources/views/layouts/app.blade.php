@@ -121,8 +121,9 @@
             @guest
             @else
               <li class="nav-item">
-                  <a class="nav-link nav-link-icon" href="{{route('home')}}" data-toggle="tooltip" title="Carrito de compras">
-                    <i class="ni ni-cart"></i>
+                  <a class="btn btn-icon btn-3 btn-outline-transparent" href="{{route('home')}}" data-toggle="tooltip" title="Carrito de compras">
+                    <span class="btn-inner--icon"><i class="ni ni-cart"></i></span>
+                    <span class="btn-inner--text">Carrito</span>
                   </a>
                 </li>
             @endguest
@@ -133,7 +134,7 @@
               <li class="nav-item dropdown">
                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                   <strong>{{ Auth::user()->name }}</strong>
-                  <i class="ni ni-circle-08"></i>
+                  <i class="fa fa-user fa-lg"></i>
                   <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
