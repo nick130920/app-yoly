@@ -37,7 +37,6 @@ class ProductController extends Controller
          $product->save(); //INSERT
          return redirect('/admin/products');
     }
-
     public function edit($id){
       $product = Product::find($id);
       $categoria_1 = Category::find(1);

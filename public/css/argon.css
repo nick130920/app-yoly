@@ -18964,15 +18964,12 @@ a.btn.btn-1.btn-out-warning:hover {
 .ne.input-group.input-group-alternative.mb-3 {
   width: auto;
 }
-h2.re {
+h1.re {
     color: #fff;
     font-family: 'Pacifico', cursive;
-    font-size: 4rem;
     text-shadow: 3px 3px 1px #ff0682;
-    width: max-content;
-    margin: auto;
 }
-h2.re:hover {
+h1.re:hover {
     text-align: center;
     color: #ff0682;
     text-shadow: 7px 4px 5px #fff;
@@ -19097,4 +19094,8 @@ a.btn.btn-icon.btn-3.btn-outline-transparent:hover {
     border-color: #ffffff;
     background-color: white;
     background-image: none;
+}
+.regist-card.card.bg-secondary.shadow.border-0 {
+    width: 50%;
+    margin: auto;
 }

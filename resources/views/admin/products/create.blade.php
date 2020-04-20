@@ -89,17 +89,9 @@
                     </select>
                   </div>
                 </div>
-                {{-- <label id="img_category_label"class="field"for="img_category"data-value="">
-                  <span>Category</span>
-                  <div id="img_category"class="psuedo_select"name="img_category">
-                    <span class="selected"></span>
-                    <ul id="img_category_options"class="options">
-                      <li class="option" data-name="category" data-value="1">Option 1</li>
-                      <li class="option" data-name="category" data-value="2">Option 2</li>
-                    </ul>
-                  </div>
-                </label> --}}
-              <textarea class="form-control form-control-alternative" name="long_description" rows="8" cols="80" placeholder="Descripción extensa del producto"></textarea>
+                <div class="form-group">
+                  <textarea class="form-control form-control-alternative" name="long_description" rows="8" cols="80" placeholder="Descripción extensa del producto"></textarea>
+                </div>
               <div class="text-center">
                 <hr>
                 <button type="submit" class="btn btn-primary">{{ __('Registrar nuevo producto') }}</button>

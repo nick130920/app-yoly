@@ -17,10 +17,6 @@
   <link href="{{asset('/vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
   <link href="{{asset('css/nucleo-icons.css')}}" rel="stylesheet">
   <link href="{{asset('css/animate.css')}}" rel="stylesheet">
-  <!-- CSS -->
-  {{-- <link type="text/css" href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet" /> --}}
-  {{-- <link type="text/css" href="{{asset('assets/css/material-kit.css?v=1.2.1')}}" rel="stylesheet"/> --}}
-
   <!-- Argon CSS -->
   <link rel="stylesheet" href="{{asset('/css/style_select.css')}}">
   <link type="text/css" href="{{asset('/css/argon.css?v=1.0.1')}}" rel="stylesheet">
@@ -93,6 +89,15 @@
                           <p class="description d-none d-md-inline-block mb-0">Gestiona tus productos en un solo lugar.</p>
                         </div>
                       </a>
+                      <a href="{{ url('/admin/categories') }}" class="media d-flex align-items-center">
+                        <div class="icon icon-shape bg-gradient-success rounded-circle text-white">
+                          <i class="ni ni-tag"></i>
+                        </div>
+                        <div class="media-body ml-3">
+                          <h6 class="heading text-primary mb-md-1">{{ __('Gestionar Categorias') }}</h6>
+                          <p class="description d-none d-md-inline-block mb-0">Gestiona tus categorias.</p>
+                        </div>
+                      </a>
                     @endif
                   @endguest
                 </div>
@@ -100,24 +105,6 @@
             </li>
           </ul>
           <ul class="navbar-nav align-items-lg-center ml-lg-auto">
-            {{-- <li class="nav-item">
-              <a class="nav-link nav-link-icon" href="https://www.facebook.com/yolyshoes" target="_blank" data-toggle="tooltip" title="Siguenos en Facebook">
-                <i class="fa fa-facebook-square"></i>
-                <span class="nav-link-inner--text d-lg-none">Facebook</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-link-icon" href="https://www.instagram.com/yolyshoes" target="_blank" data-toggle="tooltip" title="Síguenos en Instagram">
-                <i class="fa fa-instagram"></i>
-                <span class="nav-link-inner--text d-lg-none">Instagram</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-link-icon" href="https://twitter.com/yolyshoes" target="_blank" data-toggle="tooltip" title="Síguenos en Twitter">
-                <i class="fa fa-twitter-square"></i>
-                <span class="nav-link-inner--text d-lg-none">Twitter</span>
-              </a>
-            </li> --}}
             @guest
             @else
               <li class="nav-item">
@@ -141,6 +128,9 @@
                   @if (auth()->user()->admin)
                     <li>
                       <a class="dropdown-item" href="{{ url('/admin/products') }}">{{ __('Gestionar Productos') }}</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="{{ url('/admin/categories') }}">{{ __('Gestionar Categorias') }}</a>
                     </li>
                   @endif
                   <li>

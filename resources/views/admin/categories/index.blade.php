@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Listado de productos')
+@section('title', 'Listado de categorias')
 
 @section('perfil')
   <a class="dropdown-item" href="{{ route('perfil') }}">{{ __('Perfil') }}</a>
@@ -27,13 +27,13 @@
               <div class="mora card-header card-header-primary">
                 <div class="row">
                   <div class="col" style="margin-top: auto;">
-                    <h4 class="card-title mt-0">Tabla de productos</h4>
-                    <p class="blanco card-category">Encontraras todas los productos</p>
+                    <h4 class="card-title mt-0">Tabla de categorias</h4>
+                    <p class="blanco card-category">Encontraras todas las categorias</p>
                   </div>
                   <div class="col" style="margin-top: auto;">
-                    <a href="{{url('/admin/products/create')}}" class="btn btn-outline-white btn-lg" >
+                    <a href="{{url('/admin/categories/create')}}" class="btn btn-outline-white btn-lg" >
                       <span class="btn-inner--icon"><i class="fa fa-plus-square"></i></span>
-                      <span class="btn-inner--text">Nuevo producto</span>
+                      <span class="btn-inner--text">Nueva categoria</span>
                     </a>
                   </div>
                 </div>
@@ -43,42 +43,29 @@
                   <table class="table table-hover">
                     <thead class="">
                       <tr>
-                        <th>ID</th>
                         <th>Nombre</th>
                         <th>Descripción</th>
-                        <th>Referencia</th>
-                        <th>Categoria</th>
-                        <th>Precio</th>
                         <th class="acti">Acciones</th>
                       </tr>
                     </thead>
                     <tbody>
-                      @foreach ($products as $product)
-                        @foreach ($product as $images)
-                          <tr data-toggle="tooltip" data-html="true" title="<img class='image' src='{{$product->featured_image_url}}'>" data-placement="right" rel="tooltip">
-                            @break
-                          @endforeach
-                          <td>{{ $product->id}}</td>
-                          <td>{{ $product->name}}</td>
-                          <td>{{ $product->description}}</td>
-                          <td>{{ $product->reference}}</td>
-                          <td>{{ $product->category ? $product->category->name : 'General'}}</td>
-                          <td>{{ $product->price}}</td>
+                      @foreach ($categories as $category)
+                        <tr>
+                          <td>{{ $category->id}}</td>
+                          <td>{{ $category->name}}</td>
+                          <td>{{ $category->description}}</td>
                           <td class="td-actions text-right">
                             <div class="act">
-                              <a href=""  data-toggle="tooltip" data-placement="top" rel="tooltip" title="Ver producto" class="ico btn btn-1 btn-outline-info">
+                              <a href=""  data-toggle="tooltip" data-placement="top" rel="tooltip" title="Ver categoria" class="ico btn btn-1 btn-outline-info">
                                 <i class="fa fa-info"></i>
                               </a>
-                              <a href="{{url('/admin/products/'.$product->id.'/edit')}}" data-toggle="tooltip" data-placement="bottom" class="ico btn btn-1 btn-outline-success" title="Editar producto">
+                              <a href="{{url('/admin/categories/'.$category->id.'/edit')}}" data-toggle="tooltip" data-placement="bottom" class="ico btn btn-1 btn-outline-success" title="Editar categoria">
                                 <i class="tim-icons icon-settings-gear-63"></i>
                               </a>
-                              <a href="{{url('/admin/products/'.$product->id.'/images')}}" data-toggle="tooltip" data-placement="bottom" class="ico btn btn-1 btn-outline-warning" title="Imagenes del producto">
-                                <i class="fa fa-image"></i>
-                              </a>
-                              <form method="post" action="{{url('/admin/products/'.$product->id)}}">
+                              <form method="post" action="{{url('/admin/categories/'.$category->id)}}">
                                 {{csrf_field()}}
                                 {{method_field('DELETE')}}
-                                <button  type="submit" data-toggle="tooltip" data-placement="right" class="li ico btn btn-1 btn-outline-danger" title="Eliminar producto">
+                                <button  type="submit" data-toggle="tooltip" data-placement="right" class="li ico btn btn-1 btn-outline-danger" title="Eliminar categoria">
                                   <i class="tim-icons icon-trash-simple"></i>
                                 </button>
                               </form>
@@ -89,12 +76,13 @@
                     </tbody>
                   </table>
                 </div>
-                {{$products->links()}}
+                {{$categories->links()}}
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <!-- 1st Hero Variation -->
   </div>
 @endsection

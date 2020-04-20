@@ -7,10 +7,6 @@ use App\Product;
 
 class ProductController extends Controller
 {
-  public function __construct()
-  {
-      $this->middleware('auth');
-  }
     public function show($id){
       $product = Product::find($id);
       $images = $product->images()->orderBy('featured', 'desc')->get();
